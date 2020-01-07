@@ -2,13 +2,17 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jlelito.github.io/events-dapp/",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "^3.2.0",
     "web3": "^1.2.4"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
