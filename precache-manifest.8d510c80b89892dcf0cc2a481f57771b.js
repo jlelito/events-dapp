@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5dc7256e818e696e9325d752505af5fe",
+    "revision": "5cbf1aca4737bd812c2387a551e5dd28",
     "url": "/events-dapp/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/events-dapp/static/js/2.2a1f0042.chunk.js.LICENSE"
   },
   {
-    "revision": "c193c5ca00ba5bd10ac5",
-    "url": "/events-dapp/static/js/main.c2e070c8.chunk.js"
+    "revision": "d080b1d98d01f80a3714",
+    "url": "/events-dapp/static/js/main.ae2f6828.chunk.js"
   },
   {
     "revision": "03507f258f140cbd5dad",
