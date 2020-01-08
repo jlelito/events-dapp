@@ -19,7 +19,7 @@ function App() {
         EventContract.abi,
         deployedNetwork && deployedNetwork.address,
       );
-
+      
       setWeb3(web3);
       setAccounts(accounts);
       setContract(contract);
@@ -40,7 +40,6 @@ function App() {
 
   useEffect(() => {
     if(isReady()) {
-      console.log(accounts[0]);
       updateEvents();
       updateTickets();
     }
@@ -126,7 +125,7 @@ function App() {
 
       <div className="row">
         <div className="col-sm-12">
-          <h3>Current Account: {accounts[0]}</h3>
+          <span>Current Account: {accounts[0]}</span>
           <h2>Create event</h2>
           <form onSubmit={e => createEvent(e)}>
             <div className="form-group">
@@ -138,7 +137,7 @@ function App() {
               <input type="date" className="form-control" id="date" />
             </div>
             <div className="form-group">
-              <label htmlFor="price">Price</label>
+              <label htmlFor="price">Price (Wei)</label>
               <input type="text" className="form-control" id="price" />
             </div>
             <div className="form-group">
@@ -157,7 +156,7 @@ function App() {
           <h2>Transfer tickets</h2>
           <form onSubmit={e => transferTicket(e)}>
             <div className="form-group">
-              <label htmlFor="eventId">Event Id</label>
+              <label htmlFor="eventId">Event ID</label>
               <input type="text" className="form-control" id="eventId" />
             </div>
             <div className="form-group">
@@ -175,13 +174,14 @@ function App() {
 
       <hr/>
 
-      <div className="row">
+      <div className="row table-responsive-md">
         <div className="col-sm-12">
           <h2>Events</h2>
-          <table className="table">
-            <thead>
+          <table className="table table-hover">
+            <caption>List of events recorded</caption>
+            <thead className="thead-light">
               <tr>
-                <th>Id</th>
+                <th>ID</th>
                 <th>Admin</th>
                 <th>Name</th>
                 <th>Date</th>
@@ -201,7 +201,7 @@ function App() {
                   <td>
                     {(new Date(parseInt(event.date) * 1000)).toLocaleString()}
                   </td>
-                  <td>{event.price}</td>
+                  <td>{event.price} Wei</td>
                   <td>{event.ticketRemaining}</td>
                   <td>{event.ticketCount}</td>
                   <td>
