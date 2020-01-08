@@ -1,4 +1,6 @@
 # Events Decentralized Application
+This application allows users to create events, buy tickets, and transfer tickets with no middle-man,
+This smart-contract is deployed to the Ropsten Network at https://ropsten.etherscan.io/address/0x84762e82ca6889442391c2105f9b289dab38919a
 
 # How to Access and Test Dapp
 
