@@ -126,6 +126,7 @@ function App() {
 
       <div className="row">
         <div className="col-sm-12">
+          <h3>Current Account: {accounts[0]}</h3>
           <h2>Create event</h2>
           <form onSubmit={e => createEvent(e)}>
             <div className="form-group">
