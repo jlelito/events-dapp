@@ -116,7 +116,7 @@ function App() {
   
 
   if (!isReady()) {
-    return <div>Loading...</div>;
+    return <div className="text-center">Loading... Please Connect to <b>Ropsten Test Network</b> </div>;
   }
 
   return (
@@ -125,7 +125,7 @@ function App() {
 
       <div className="row">
         <div className="col-sm-12">
-          <span>Current Account: {accounts[0]}</span>
+          <span>Current Account: <b>{accounts[0]}</b></span>
           <h2>Create event</h2>
           <form onSubmit={e => createEvent(e)}>
             <div className="form-group">
